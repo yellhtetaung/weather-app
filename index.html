@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather API</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="select-none">
+    <div class="container mx-auto mt-3">
+      <form action="" method="get" class="flex">
+        <input
+          type="search"
+          placeholder="Search City"
+          class="flex-1 bg-slate-300 border rounded-l-md p-3 focus:outline-none"
+        />
+        <button type="submit" class="bg-red-600 text-white px-8 rounded-r-md">
+          Search
+        </button>
+      </form>
+
+      <div class="container mt-3">
+        <div class="flex justify-between my-5">
+          <h1 class="text-start text-3xl" id="country"></h1>
+          <h1 class="text-end text-xl">
+            <span>Today</span>/<span
+              class="text-3xl text-red-500"
+              id="location"
+            ></span>
+          </h1>
+        </div>
+
+        <div class="flex my-5">
+          <div class="flex w-1/2 text-start">
+            <div class="w-1/4">
+              <img
+                id="weatherImage"
+                class="w-auto mx-auto"
+                alt="condition_img"
+              />
+            </div>
+            <div class="w-1/2">
+              <h6 class="text-xl">
+                <span id="temp"></span>
+                <a
+                  class="bg-red-600 text-white p-2 rounded-md cursor-pointer"
+                  id="celsius"
+                  >˚C</a
+                >
+                |
+                <a class="cursor-pointer p-2" id="fahrenheit">˚F</a>
+              </h6>
+              <p id="weatherCondition" class="text-lg mt-3">Sunny</p>
+            </div>
+          </div>
+
+          <div class="w-1/2 text-end">
+            <h6 class="text-lg" id="day"></h6>
+            <p class="text-lg" id="dateTime"></p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-3 gap-5 mt-10" id="forecast"></div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
